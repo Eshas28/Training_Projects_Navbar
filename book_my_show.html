@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow Navbar</title>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5%;
+            gap: 20px;
+            background-color: white;
+        }
+
+       
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            color: #222;
+            white-space: nowrap;
+        }
+
+        .logo .my {
+            background-color: #f84464;
+            color: white;
+            padding: 2px;
+        }
+
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            padding: 8px 12px;
+            flex: 1;
+            max-width: 1200px;
+        }
+
+        .search-box span {
+            margin-right: 10px;
+            color: #777;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 13px;
+        }
+
+        
+        .right-side {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .city {
+            font-size: 12px;
+            color: #333;
+        }
+
+        .sign-in {
+            background-color: #f84464;
+            color: white;
+            border: none;
+            padding: 7px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .menu {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+       
+        .bottom-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 12px 10%;
+            font-size: 13px;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .bottom-navbar a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-right {
+            font-size: 11px;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .top-navbar {
+                padding: 10px;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .search-box {
+                order: 3;
+                flex-basis: 100%;
+                max-width: none;
+            }
+
+            .right-side {
+                margin-left: auto;
+                gap: 10px;
+            }
+
+            .bottom-navbar {
+                padding: 12px;
+                overflow-x: auto;
+                gap: 25px;
+                justify-content: flex-start;
+            }
+
+            .nav-left, .nav-right {
+                gap: 15px;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-navbar">
+
+            <div class="logo">
+                <span>book</span><span class="my">my</span><span>show</span>
+            </div>
+
+            <div class="search-box">
+                <span>
+                     <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text"
+                    placeholder="Search for Movies, Events, Plays, Sports and Activities">
+            </div>
+
+            <div class="right-side">
+                <span class="city">Pune ﹀</span>
+                <button class="sign-in">Sign In</button>
+                <span class="menu">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </span>
+            </div>
+
+        </div>
+
+        <nav class="bottom-navbar">
+            <div class="nav-left">
+                <a href="#">Movies</a>
+                <a href="#">Stream</a>
+                <a href="#">Events</a>
+                <a href="#">Plays</a>
+                <a href="#">Sports</a>
+                <a href="#">Activities</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="#">ListYourShow</a>
+                <a href="#">Corporates</a>
+                <a href="#">Offers</a>
+                <a href="#">Gift Cards</a>
+            </div>
+        </nav>
+    </header>
+
+</body>
+</html>
